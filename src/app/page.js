@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-
+import Image from 'next/image';
 
 import {
   AppBar,
@@ -24,26 +24,8 @@ import {
   envelopeIcon,
   menuIcon,
 } from '@progress/kendo-svg-icons';
-import Logo from '@/app/assets/logo.svg';
-import HeroL1 from '@/app/assets/hero-l-1.svg';
-import Feature1 from '@/app/assets/feature-1.svg';
-import Feature2 from '@/app/assets/feature-2.svg';
-import Feature3 from '@/app/assets/feature-3.svg';
-import Feature4 from '@/app/assets/feature-4.svg';
-import Feature5 from '@/app/assets/feature-5.svg';
-import Feature6 from '@/app/assets/feature-6.svg';
-import FTSL1 from '@/app/assets/fts-l-1.svg';
-import User from '@/app/assets/testmnl-user.png';
-import Quotes from '@/app/assets/quotes.svg';
-import Logo1 from '@/app/assets/logo-1.svg';
-import Logo2 from '@/app/assets/logo-2.svg';
-import Logo3 from '@/app/assets/logo-3.svg';
-import Logo4 from '@/app/assets/logo-4.svg';
-import Logo5 from '@/app/assets/logo-5.svg';
-import Logo6 from '@/app/assets/logo-6.svg';
-import Logo7 from '@/app/assets/logo-7.svg';
-import FooterLogo from '@/app/assets/footer-logo.svg';
-
+ 
+ 
 
 
 export default function SaasProduct() {
@@ -59,7 +41,7 @@ export default function SaasProduct() {
           <AppBarSection className="k-container !k-flex-row k-px-4">
             <div className="k-d-flex k-flex-basis-0 k-flex-grow">
               <a className="k-d-flex" href="#">
-                <img src={Logo} alt="Logo" />
+                <Image src="/logo.svg" alt="Logo" width={128} height={36} />
               </a>
             </div>
             <div className="k-d-none k-d-lg-flex k-flex-basis-0 k-flex-grow k-justify-content-center">
@@ -147,7 +129,18 @@ export default function SaasProduct() {
               </div>
             </div>
             <div className="k-d-none k-d-md-flex k-flex-basis-0 k-flex-grow k-align-items-center k-justify-content-center">
-              <img src={HeroL1} alt="Image" style={{ display: "block", maxWidth: "100%", height: "auto", objectFit: "contain" }} />
+              <div
+                className="k-pos-relative"
+                style={{
+                  width: '100%',
+                  maxWidth: '600px',
+                  height: '600px',
+                  backgroundImage: 'url("/hero-l-1.svg")',
+                  backgroundSize: 'contain',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                }}
+              ></div>
             </div>
           </div>
         </section>
@@ -171,7 +164,7 @@ export default function SaasProduct() {
                     style={{
                       width: '56px',
                       height: '56px',
-                      backgroundImage: `url(${Feature1})`,
+                      backgroundImage: `url('/feature-1.svg')`,
                       backgroundRepeat: 'no-repeat',
                       backgroundPosition: 'center center',
                     }}
@@ -199,7 +192,7 @@ export default function SaasProduct() {
                     style={{
                       width: '56px',
                       height: '56px',
-                      backgroundImage: `url(${Feature2})`,
+                      backgroundImage: `url('/feature-2.svg')`,
                       backgroundRepeat: 'no-repeat',
                       backgroundPosition: 'center center',
                     }}
@@ -227,7 +220,7 @@ export default function SaasProduct() {
                     style={{
                       width: '56px',
                       height: '56px',
-                      backgroundImage: `url(${Feature3})`,
+                      backgroundImage: `url('/feature-3.svg')`,
                       backgroundRepeat: 'no-repeat',
                       backgroundPosition: 'center center',
                     }}
@@ -255,7 +248,7 @@ export default function SaasProduct() {
                     style={{
                       width: '56px',
                       height: '56px',
-                      backgroundImage: `url(${Feature4})`,
+                      backgroundImage: `url('/feature-4.svg')`,
                       backgroundRepeat: 'no-repeat',
                       backgroundPosition: 'center center',
                     }}
@@ -283,7 +276,7 @@ export default function SaasProduct() {
                     style={{
                       width: '56px',
                       height: '56px',
-                      backgroundImage: `url(${Feature5})`,
+                      backgroundImage: `url('/feature-5.svg')`,
                       backgroundRepeat: 'no-repeat',
                       backgroundPosition: 'center center',
                     }}
@@ -311,7 +304,7 @@ export default function SaasProduct() {
                     style={{
                       width: '56px',
                       height: '56px',
-                      backgroundImage: `url(${Feature6})`,
+                      backgroundImage: `url('/feature-6.svg')`,
                       backgroundRepeat: 'no-repeat',
                       backgroundPosition: 'center center',
                     }}
@@ -360,7 +353,7 @@ export default function SaasProduct() {
                     style={{
                       width: '56px',
                       height: '56px',
-                      backgroundImage: `url(${Feature1})`,
+                      backgroundImage: `url('/feature-1.svg')`,
                       backgroundRepeat: 'no-repeat',
                       backgroundPosition: 'center center',
                     }}
@@ -383,7 +376,7 @@ export default function SaasProduct() {
                     style={{
                       width: '56px',
                       height: '56px',
-                      backgroundImage: `url(${Feature1})`,
+                      backgroundImage: `url('/feature-1.svg')`,
                       backgroundRepeat: 'no-repeat',
                       backgroundPosition: 'center center',
                     }}
@@ -403,7 +396,18 @@ export default function SaasProduct() {
               </div>
             </div>
             <div className="k-d-none k-d-md-flex k-flex-basis-0 k-flex-grow k-align-items-center k-justify-content-center">
-              <img src={FTSL1} alt="Image" style={{ display: "block", maxWidth: "100%", height: "auto", objectFit: "contain" }} />
+              <div
+                className="k-pos-relative"
+                style={{
+                  width: '100%',
+                  maxWidth: '600px',
+                  height: '600px',
+                  backgroundImage: 'url("/fts-l-1.svg")',
+                  backgroundSize: 'contain',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                }}
+              ></div>
             </div>
           </div>
         </section>
@@ -411,7 +415,7 @@ export default function SaasProduct() {
         <section className="k-bg-app-surface k-py-8 k-py-md-15 k-py-lg-24">
           <div className="k-container !k-flex-row k-gap-5 k-gap-md-10 k-gap-lg-14 k-flex-wrap k-px-4">
             <div className="k-d-none k-d-md-flex k-flex-basis-0 k-flex-grow k-align-items-center k-justify-content-center">
-              <img src={FTSL1} alt="Image" style={{ display: "block", maxWidth: "100%", height: "auto", objectFit: "contain" }} />
+              <img src="/fts-l-1.svg" alt="Image" style={{ display: "block", maxWidth: "100%", height: "auto", objectFit: "contain" }} />
             </div>
             <div className="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-14">
               <div className="k-d-flex k-flex-col k-gap-4">
@@ -431,7 +435,7 @@ export default function SaasProduct() {
                     style={{
                       width: '56px',
                       height: '56px',
-                      backgroundImage: `url(${Feature1})`,
+                      backgroundImage: `url('/feature-1.svg')`,
                       backgroundRepeat: 'no-repeat',
                       backgroundPosition: 'center center',
                     }}
@@ -454,7 +458,7 @@ export default function SaasProduct() {
                     style={{
                       width: '56px',
                       height: '56px',
-                      backgroundImage: `url(${Feature1})`,
+                      backgroundImage: 'url("/feature-1.svg")',
                       backgroundRepeat: 'no-repeat',
                       backgroundPosition: 'center center',
                     }}
@@ -703,8 +707,47 @@ export default function SaasProduct() {
               <div className="k-d-flex k-flex-col k-gap-5 k-p-6 k-bg-surface-alt k-border k-border-solid k-border-border k-rounded-lg k-overflow-hidden">
                 <div className="k-d-flex k-align-items-center k-justify-content-between">
                   <Avatar type="image" className="!k-flex-basis-25 !k-w-25 !k-h-25">
+                    <Image
+                    src="/testmnl-user.png"
+                    alt="User"
+                    width={120}
+                    height={120}
+                    className="k-rounded-full"
+                  />
+                  </Avatar>
+                  <Image
+                    src="/quotes.svg"
+                    alt="Quotation marks"
+                    width={123}
+                    height={100}
+                  />
+                </div>
+                <div className="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow">
+                  <div className="k-d-flex k-flex-col k-gap-4">
+                    <div className="k-d-flex k-flex-col k-gap-1">
+                      <div className="k-font-size-lg k-line-height-md">Martin McDermott</div>
+                      <div className="k-line-height-md k-color-subtle k-font-style-italic">
+                        Business Analyst
+                      </div>
+                    </div>
+                    <div className="k-d-flex">
+                      <p className="!k-m-0 k-line-height-md">
+                        The standard chunk of Lorem Ipsum used since the 1500s is
+                        reproduced below for those interested. Sections 1.10.32
+                        and 1.10.33 from.
+                      </p>
+                    </div>
+                    <div className="k-d-flex">
+                      <Rating value={3.5} precision="half" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="k-d-flex k-flex-col k-gap-5 k-p-6 k-bg-surface-alt k-border k-border-solid k-border-border k-rounded-lg k-overflow-hidden">
+                <div className="k-d-flex k-align-items-center k-justify-content-between">
+                  <Avatar type="image" className="!k-flex-basis-25 !k-w-25 !k-h-25">
                     <img
-                      src={User}
+                      src="/testmnl-user.png"
                       alt="User"
                       width="120px"
                       height="120px"
@@ -712,7 +755,7 @@ export default function SaasProduct() {
                     />
                   </Avatar>
                   <img
-                    src={Quotes}
+                    src="/quotes.svg"
                     alt="Quotation marks"
                     width="123px"
                     height="100px"
@@ -743,7 +786,7 @@ export default function SaasProduct() {
                 <div className="k-d-flex k-align-items-center k-justify-content-between">
                   <Avatar type="image" className="!k-flex-basis-25 !k-w-25 !k-h-25">
                     <img
-                      src={User}
+                      src="/testmnl-user.png"
                       alt="User"
                       width="120px"
                       height="120px"
@@ -751,46 +794,7 @@ export default function SaasProduct() {
                     />
                   </Avatar>
                   <img
-                    src={Quotes}
-                    alt="Quotation marks"
-                    width="123px"
-                    height="100px"
-                  />
-                </div>
-                <div className="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow">
-                  <div className="k-d-flex k-flex-col k-gap-4">
-                    <div className="k-d-flex k-flex-col k-gap-1">
-                      <div className="k-font-size-lg k-line-height-md">Martin McDermott</div>
-                      <div className="k-line-height-md k-color-subtle k-font-style-italic">
-                        Business Analyst
-                      </div>
-                    </div>
-                    <div className="k-d-flex">
-                      <p className="!k-m-0 k-line-height-md">
-                        The standard chunk of Lorem Ipsum used since the 1500s is
-                        reproduced below for those interested. Sections 1.10.32
-                        and 1.10.33 from.
-                      </p>
-                    </div>
-                    <div className="k-d-flex">
-                      <Rating value={3.5} precision="half" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="k-d-flex k-flex-col k-gap-5 k-p-6 k-bg-surface-alt k-border k-border-solid k-border-border k-rounded-lg k-overflow-hidden">
-                <div className="k-d-flex k-align-items-center k-justify-content-between">
-                  <Avatar type="image" className="!k-flex-basis-25 !k-w-25 !k-h-25">
-                    <img
-                      src={User}
-                      alt="User"
-                      width="120px"
-                      height="120px"
-                      className="k-rounded-full"
-                    />
-                  </Avatar>
-                  <img
-                    src={Quotes}
+                    src="/quotes.svg"
                     alt="Quotation marks"
                     width="123px"
                     height="100px"
@@ -830,13 +834,13 @@ export default function SaasProduct() {
               </h2>
             </div>
             <div className="k-d-flex k-flex-wrap k-flex-col k-flex-md-row k-align-items-center k-p-8 k-gap-10 k-mb-12 k-justify-content-between k-w-full">
-              <img src={Logo1} alt="Logo 1" />
-              <img src={Logo2} alt="Logo 2" />
-              <img src={Logo3} alt="Logo 3" />
-              <img src={Logo4} alt="Logo 4" />
-              <img src={Logo5} alt="Logo 5" />
-              <img src={Logo6} alt="Logo 6" />
-              <img src={Logo7} alt="Logo 7" />
+              <Image src="/logo-1.svg" alt="Logo 1" width={100} height={50} />
+              <Image src="/logo-2.svg" alt="Logo 2" width={100} height={50} />
+              <Image src="/logo-3.svg" alt="Logo 3" width={100} height={50} />
+              <Image src="/logo-4.svg" alt="Logo 4" width={100} height={50} />
+              <Image src="/logo-5.svg" alt="Logo 5" width={100} height={50} />
+              <Image src="/logo-6.svg" alt="Logo 6" width={100} height={50} />
+              <Image src="/logo-7.svg" alt="Logo 7" width={100} height={50} />
             </div>
           </div>
         </section>
@@ -894,7 +898,7 @@ export default function SaasProduct() {
         <div className="k-container">
           <div className="k-d-grid k-grid-cols-1 k-grid-cols-md-2 k-grid-cols-lg-6 k-gap-5 k-px-4">
             <div className="k-d-flex k-flex-col k-gap-10 k-col-span-lg-2">
-              <img src={FooterLogo} alt="Logo" width="128px" height="36px" />
+              <Image src="/footer-logo.svg" alt="Logo" width={128} height={36} />
               <div className="k-d-flex k-flex-col k-gap-4">
                 <div className="k-d-flex k-gap-2">
                   <SvgIcon
