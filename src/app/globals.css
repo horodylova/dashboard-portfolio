@@ -1,42 +1,238 @@
+ @import 'https://fonts.googleapis.com/css2?family=Public+Sans:wght@300..700&display=swap';
+
+ *, ::before, ::after { 
+  box-sizing: border-box; 
+}
+
+p, ul, ol, h1, h2, h3, h4, h5, h6, p, pre, blockquote { 
+  margin: 0; 
+}
+
+h1, h2, h3, h4, h5, h6 { 
+  font-size: inherit; 
+  font-weight: inherit; 
+}
+
+ol, ul { 
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+}
+
+hr { 
+  height: 0; 
+  border-top-width: 1px; 
+  border-bottom-width: 0; 
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+    /* Color System Swatch */
+    /* Misc */
+    --kendo-color-app-surface: #ffffff;
+    --kendo-color-surface: #F7F7F8;
+    --kendo-color-surface-alt: #ffffff;
+    --kendo-color-on-app-surface: #30343B;
+    --kendo-color-subtle: #606876;
+    --kendo-color-border: rgba(48, 52, 59, 0.10);
+    --kendo-color-border-alt: rgba(48, 52, 59, 0.20);
+    /* Base */
+    --kendo-color-base-subtle: #F7F7F8;
+    --kendo-color-base-subtle-hover: #E9EAED;
+    --kendo-color-base-subtle-active: #DBDDE1;
+    --kendo-color-base: #E9EAED;
+    --kendo-color-base-hover: #DBDDE1;
+    --kendo-color-base-active: #BFC2CA;
+    --kendo-color-base-emphasis: #AFB6B6;
+    --kendo-color-on-base: #30343B;
+    --kendo-color-base-on-surface: #30343B;
+    --kendo-color-base-on-subtle: #30343B;
+    /* Primary */
+    --kendo-color-primary-subtle: #F6F9FE;
+    --kendo-color-primary-subtle-hover: #E0E9FA;
+    --kendo-color-primary-subtle-active: #BED0F4;
+    --kendo-color-primary: #225AC8;
+    --kendo-color-primary-hover: #1D4CAA;
+    --kendo-color-primary-active: #194190;
+    --kendo-color-primary-emphasis: #8EADEC;
+    --kendo-color-on-primary: #ffffff;
+    --kendo-color-primary-on-surface: #1D4CAA;
+    --kendo-color-primary-on-subtle: #0D234E;
+    /* Secondary */
+    --kendo-color-secondary-subtle: #BFC2CA;
+    --kendo-color-secondary-subtle-hover: #A8ADB8;
+    --kendo-color-secondary-subtle-active: #9AA0AC;
+    --kendo-color-secondary: #9AA0AC;
+    --kendo-color-secondary-hover: #878E9C;
+    --kendo-color-secondary-active: #737B8C;
+    --kendo-color-secondary-emphasis: #737B8C;
+    --kendo-color-on-secondary: #000000;
+    --kendo-color-secondary-on-surface: #878E9C;
+    --kendo-color-secondary-on-subtle: #1C1E22;
+    /* Tertiary */
+    --kendo-color-tertiary-subtle: #FFF1DB;
+    --kendo-color-tertiary-subtle-hover: #FFE4BD;
+    --kendo-color-tertiary-subtle-active: #FFD699;
+    --kendo-color-tertiary: #FFB13D;
+    --kendo-color-tertiary-hover: #FF9C08;
+    --kendo-color-tertiary-active: #F09000;
+    --kendo-color-tertiary-emphasis: #FFB13D;
+    --kendo-color-on-tertiary: #000000;
+    --kendo-color-tertiary-on-surface: #F09000;
+    --kendo-color-tertiary-on-subtle: #663D00;
+    /* Error */
+    --kendo-color-error-subtle: #FAC7CB;
+    --kendo-color-error-subtle-hover: #F8ABB2;
+    --kendo-color-error-subtle-active: #F58E99;
+    --kendo-color-error: #E11428;
+    --kendo-color-error-hover: #C51123;
+    --kendo-color-error-active: #A90F1E;
+    --kendo-color-error-emphasis: #EF4D5D;
+    --kendo-color-on-error: #000000;
+    --kendo-color-error-on-surface: #C51123;
+    --kendo-color-error-on-subtle: #38050A;
+    /* Success */
+    --kendo-color-success-subtle: #DCF1D0;
+    --kendo-color-success-subtle-hover: #CBEAB9;
+    --kendo-color-success-subtle-active: #B9E2A1;
+    --kendo-color-success: #71C441;
+    --kendo-color-success-hover: #65B437;
+    --kendo-color-success-active: #589C30;
+    --kendo-color-success-emphasis: #97D472;
+    --kendo-color-on-success: #000000;
+    --kendo-color-success-on-surface: #65B437;
+    --kendo-color-success-on-subtle: #233E13;
+    /* Warning */
+    --kendo-color-warning-subtle: #FFF5C2;
+    --kendo-color-warning-subtle-hover: #FFF0A3;
+    --kendo-color-warning-subtle-active: #FFEA83;
+    --kendo-color-warning: #FFD60A;
+    --kendo-color-warning-hover: #EBC400;
+    --kendo-color-warning-active: #CCAA00;
+    --kendo-color-warning-emphasis: #FFE047;
+    --kendo-color-on-warning: #000000;
+    --kendo-color-warning-on-surface: #EBC400;
+    --kendo-color-warning-on-subtle: #524400;
+    /* Info */
+    --kendo-color-info-subtle: #C8EFF9;
+    --kendo-color-info-subtle-hover: #ACE7F6;
+    --kendo-color-info-subtle-active: #91DFF3;
+    --kendo-color-info: #17ACD2;
+    --kendo-color-info-hover: #1497B8;
+    --kendo-color-info-active: #11809C;
+    --kendo-color-info-emphasis: #59CFED;
+    --kendo-color-on-info: #000000;
+    --kendo-color-info-on-surface: #1497B8;
+    --kendo-color-info-on-subtle: #083C4A;
+    /* Light */
+    --kendo-color-light-subtle: #F7F7F8;
+    --kendo-color-light-subtle-hover: #E9EAED;
+    --kendo-color-light-subtle-active: #DBDDE1;
+    --kendo-color-light: #E9EAED;
+    --kendo-color-light-hover: #DBDDE1;
+    --kendo-color-light-active: #BFC2CA;
+    --kendo-color-light-emphasis: #A8ADB8;
+    --kendo-color-on-light: #30343B;
+    --kendo-color-light-on-surface: #DBDDE1;
+    --kendo-color-light-on-subtle: #30343B;
+    /* Dark */
+    --kendo-color-dark-subtle: #1C1E22;
+    --kendo-color-dark-subtle-hover: #272A30;
+    --kendo-color-dark-subtle-active: #30343B;
+    --kendo-color-dark: #272A30;
+    --kendo-color-dark-hover: #30343B;
+    --kendo-color-dark-active: #3C4049;
+    --kendo-color-dark-emphasis: #4E545F;
+    --kendo-color-on-dark: #FFFFFF;
+    --kendo-color-dark-on-surface: #30343B;
+    --kendo-color-dark-on-subtle: #F7F7F8;
+    /* Series A */
+    --kendo-color-series-a-subtler: #FFB1AC;
+    --kendo-color-series-a: #FF6358;
+    --kendo-color-series-a-bold: #BF4A42;
+    --kendo-color-series-a-subtle: #FF8A82;
+    --kendo-color-series-a-bolder: #80322C;
+    /* Series B */
+    --kendo-color-series-b-subtler: #FFF0B1;
+    --kendo-color-series-b: #FFE162;
+    --kendo-color-series-b-bold: #BFA94A;
+    --kendo-color-series-b-subtle: #FFE989;
+    --kendo-color-series-b-bolder: #807131;
+    /* Series C */
+    --kendo-color-series-c-subtler: #A6E8C0;
+    --kendo-color-series-c: #4CD180;
+    --kendo-color-series-c-bold: #399D60;
+    --kendo-color-series-c-subtle: #79DDA0;
+    --kendo-color-series-c-bolder: #266940;
+    /* Series D */
+    --kendo-color-series-d-subtler: #A5AFFD;
+    --kendo-color-series-d: #4B5FFA;
+    --kendo-color-series-d-bold: #3847BC;
+    --kendo-color-series-d-subtle: #7887FB;
+    --kendo-color-series-d-bolder: #26307D;
+    /* Series E */
+    --kendo-color-series-e-subtler: #D6ACFF;
+    --kendo-color-series-e: #AC58FF;
+    --kendo-color-series-e-bold: #8142BF;
+    --kendo-color-series-e-subtle: #C182FF;
+    --kendo-color-series-e-bolder: #562C80;
+    /* Series F */
+    --kendo-color-series-f-subtler: #FFACC9;
+    --kendo-color-series-f: #FF5892;
+    --kendo-color-series-f-bold: #BF426E;
+    --kendo-color-series-f-subtle: #FF82AD;
+    --kendo-color-series-f-bolder: #802C49;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+   /* Typography */
+   --kendo-font-family: 'Public Sans', sans-serif;
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+   --kendo-font-size: 16px;
+   --kendo-font-size-xs: 12px;
+   --kendo-font-size-sm: 14px;
+   --kendo-font-size-md: var(--kendo-font-size);
+   --kendo-font-size-lg: 20px;
+   --kendo-font-size-xl: 24px;
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+   --kendo-h1-font-size: 64px;
+   --kendo-h2-font-size: 48px;
+   --kendo-h3-font-size: 40px;
+   --kendo-h4-font-size: 32px;
+   --kendo-h5-font-size: 24px;
+   --kendo-h6-font-size: 16px;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+   --kendo-line-height-xs: 1.2;
+   --kendo-line-height-sm: 1.25;
+   --kendo-line-height-md: 1.5;
+   --kendo-line-height-lg: 2;
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+   --kendo-h1-line-height: calc((var(--kendo-font-size) * 4) * 1.25);
+   --kendo-h2-line-height: calc((var(--kendo-font-size) * 3) * 1.2);
+   --kendo-h3-line-height: calc((var(--kendo-font-size) * 2.5) * 1.25);
+   --kendo-h4-line-height: calc((var(--kendo-font-size) * 2) * 1.2);
+   --kendo-h5-line-height: calc((var(--kendo-font-size) * 1.5) * 1.25);
+   --kendo-h6-line-height: calc((var(--kendo-font-size) * 1) * 1.25);
+
+   --kendo-h1-font-weight: 600;
+   --kendo-h2-font-weight: 600;
+   --kendo-h3-font-weight: 600;
+   --kendo-h4-font-weight: 600;
+   --kendo-h5-font-weight: 600;
+   --kendo-h6-font-weight: 600;
+
+
+   /* Border radius */
+   --k-border-radius-null: 0px;
+   --kendo-border-radius-xs: 1px;
+   --kendo-border-radius-sm: 2px;
+   --kendo-border-radius-md: 4px;
+   --kendo-border-radius-lg: 8px;
+   --kendo-border-radius-xl: 16px;
+   --kendo-border-radius-xxl: 32px;
+   --kendo-border-radius-xxxl: 64px;
+   --kendo-border-radius-full: 9999px;
+
+
+   /* Responsive Layout */
+   --kendo-container-xl-max-width: 1120px;
+   --kendo-container-xxl-max-width: 1120px;
 }
