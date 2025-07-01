@@ -36,16 +36,7 @@ export default function Header() {
               <MenuItem text="Testimonials"></MenuItem>
             </Menu>
           </div>
-          <div className="k-d-none k-d-lg-flex k-flex-basis-0 k-flex-grow k-justify-content-end">
-            <div className="k-d-flex k-align-items-center k-gap-2.5">
-              <Button size="small" themeColor="base" fillMode="flat">
-                Sign In
-              </Button>
-              <Button size="small" themeColor="primary">
-                Get Started
-              </Button>
-            </div>
-          </div>
+    
           <div className="k-d-lg-none k-d-flex k-flex-basis-0 k-flex-grow k-justify-content-end">
             <Button svgIcon={menuIcon} icon="menu" themeColor={"primary"} fillMode="flat"></Button>
           </div>
