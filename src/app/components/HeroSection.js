@@ -12,12 +12,11 @@ export default function HeroSection() {
         <div className="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-12 k-gap-md-10">
           <div className="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-5 k-gap-sm-6 k-gap-md-12">
             <div className="k-d-flex k-flex-col k-gap-4">
-              <h1 className="k-h1 !k-m-0">
-                Increase your website traffic with Lead Master
+              <h1 className="k-h2 !k-m-0">
+              Custom dashboards, smart analytics, zero blind spots
               </h1>
               <p className="k-font-size-lg !k-m-0">
-                The standard chunk of Lorem Ipsum used since the 1500s is
-                reproduced below for those interested.
+              I help you automate, monitor, and grow — with React, Kendo UI, and seamless API integrations.
               </p>
             </div>
             <div className="k-d-flex k-flex-col k-flex-sm-row k-align-items-start k-gap-5">
@@ -26,7 +25,7 @@ export default function HeroSection() {
                 themeColor="primary"
                 className="!k-line-height-md"
               >
-                Get a Free Trial
+                Review My Data
               </Button>
               <Button
                 size="large"
@@ -36,7 +35,7 @@ export default function HeroSection() {
                 fillMode="outline"
                 className="!k-line-height-md"
               >
-                Watch Demo
+                Watch 40s Demo
               </Button>
             </div>
           </div>
@@ -44,21 +43,21 @@ export default function HeroSection() {
             <div className="k-d-flex k-flex-col k-flex-sm-row k-gap-5">
               <div className="k-d-flex k-align-items-center k-gap-2.5">
                 <SvgIcon icon={checkIcon} themeColor="tertiary" />
-                <div className="k-color-subtle">Free 14-day trial</div>
+                <div className="k-color-subtle">Data Security & NDA Friendly</div>
               </div>
               <div className="k-d-flex k-align-items-center k-gap-2.5">
                 <SvgIcon icon={checkIcon} themeColor="tertiary" />
-                <div className="k-color-subtle">Support 24/7</div>
+                <div className="k-color-subtle">Fast Delivery</div>
               </div>
             </div>
             <div className="k-d-flex k-flex-col k-flex-sm-row k-gap-5">
               <div className="k-d-flex k-align-items-center k-gap-2.5">
                 <SvgIcon icon={checkIcon} themeColor="tertiary" />
-                <div className="k-color-subtle">Cancel anytime</div>
+                <div className="k-color-subtle">Ongoing Support After Delivery</div>
               </div>
               <div className="k-d-flex k-align-items-center k-gap-2.5">
                 <SvgIcon icon={checkIcon} themeColor="tertiary" />
-                <div className="k-color-subtle">No credit card required</div>
+                <div className="k-color-subtle">Personalised Dashboard Audit</div>
               </div>
             </div>
           </div>
