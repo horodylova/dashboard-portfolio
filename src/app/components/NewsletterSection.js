@@ -11,7 +11,7 @@ export default function NewsletterSection() {
     <section className="k-bg-app-surface k-py-8">
       <div
         className="k-d-flex k-flex-col k-gap-5 k-gap-md-10 k-align-items-center k-py-8 k-py-md-16 k-px-4 k-px-md-19 k-px-lg-24 k-bg-primary k-color-white k-rounded-xl k-mx-auto k-box-sizing-border"
-        style={{ maxWidth: '935px', marginTop: '-14rem' }}
+        style={{ maxWidth: '935px', marginTop: '0' }}  
       >
         <div className="k-d-flex k-flex-col k-align-items-center k-gap-4">
           <h2 className="k-h2 !k-m-0 k-text-center">Start your 14-Day Free Trial</h2>
