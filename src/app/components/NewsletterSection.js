@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Button } from '@progress/kendo-react-buttons';
-import { TextBox, InputSuffix } from '@progress/kendo-react-inputs';
 import { SvgIcon } from '@progress/kendo-react-common';
 import { checkIcon } from '@progress/kendo-svg-icons';
 
@@ -14,40 +13,43 @@ export default function NewsletterSection() {
         style={{ maxWidth: '935px', marginTop: '0' }}  
       >
         <div className="k-d-flex k-flex-col k-align-items-center k-gap-4">
-          <h2 className="k-h2 !k-m-0 k-text-center">Let’s Work Together</h2>
+          <h2 className="k-h2 !k-m-0 k-text-center">Let's Work Together</h2>
           <p className="k-font-size-lg k-text-center !k-m-0">
-            Many desktop publishing packages and web page editors now use
-            Lorem Ipsum.
+          To make our collaboration efficient and transparent, please fill in my short project brief (available in English and Ukrainian). This will help me quickly assess your needs and offer the best solution.
           </p>
         </div>
-        <div className="k-d-flex k-justify-content-center" style={{ width: "488px", maxWidth: "100%" }}>
-          <TextBox
-            placeholder="Your email"
-            name="trial-email"
-            style={{ width: '488px' }}
-            suffix={() => (
-              <InputSuffix>
-                <Button themeColor="tertiary">Sign up Free</Button>
-              </InputSuffix>
-            )}
-          />
+        <div className="k-d-flex k-justify-content-center k-gap-4" style={{ maxWidth: "100%" }}>
+          <Button 
+            themeColor="tertiary" 
+            size="large"
+            onClick={() => window.open('https://docs.google.com/forms/d/10sQYKYZXn8Sdnx9OBf83BWVr8R2f-IYCljEshRujtRY/edit', '_blank')}
+          >
+            Start in English
+          </Button>
+          <Button 
+            themeColor="tertiary" 
+            size="large"
+            onClick={() => window.open('https://forms.google.com/your-ukrainian-form-link', '_blank')}
+          >
+            Почати українською
+          </Button>
         </div>
         <div className="k-d-flex k-flex-col k-flex-sm-row k-justify-content-center k-gap-4 k-gap-sm-10 k-flex-wrap">
           <div className="k-d-flex k-align-items-center k-gap-2">
             <SvgIcon icon={checkIcon} />
-            <div>Free 14-day trial</div>
+            <div>Clear onboarding</div>
           </div>
           <div className="k-d-flex k-align-items-center k-gap-2">
             <SvgIcon icon={checkIcon} />
-            <div>No credit card required</div>
+            <div>Realistic timelines</div>
           </div>
           <div className="k-d-flex k-align-items-center k-gap-2">
             <SvgIcon icon={checkIcon} />
-            <div>Support 24/7</div>
+            <div>Personalised feedback</div>
           </div>
           <div className="k-d-flex k-align-items-center k-gap-2">
             <SvgIcon icon={checkIcon} />
-            <div>Cancel anytime</div>
+            <div>Ongoing support</div>
           </div>
         </div>
       </div>
