@@ -14,7 +14,7 @@ export default function NewsletterSection() {
         style={{ maxWidth: '935px', marginTop: '0' }}  
       >
         <div className="k-d-flex k-flex-col k-align-items-center k-gap-4">
-          <h2 className="k-h2 !k-m-0 k-text-center">Start your 14-Day Free Trial</h2>
+          <h2 className="k-h2 !k-m-0 k-text-center">Let’s Work Together</h2>
           <p className="k-font-size-lg k-text-center !k-m-0">
             Many desktop publishing packages and web page editors now use
             Lorem Ipsum.

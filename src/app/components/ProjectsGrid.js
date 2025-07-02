@@ -46,7 +46,7 @@ export default function ProjectsGrid() {
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   priority={isGithubImage}
-                  style={{ objectFit: 'cover' }}
+                  style={{ objectFit: 'contain', padding: '10px' }}
                   className="project-image"
                 />
               </div>
