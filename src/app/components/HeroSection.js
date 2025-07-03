@@ -9,7 +9,7 @@ export default function HeroSection() {
   const [showVideo, setShowVideo] = useState(false);
 
   return (
-    <section className="k-bg-surface k-py-8 k-py-md-10 k-py-lg-25">
+    <section id="hero" className="k-bg-surface k-py-8 k-py-md-10 k-py-lg-25">
       <div className="k-container !k-flex-row k-gap-5 k-px-4">
         <div className="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-12 k-gap-md-10">
           <div className="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-5 k-gap-sm-6 k-gap-md-12">

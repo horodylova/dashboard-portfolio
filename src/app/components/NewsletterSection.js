@@ -7,7 +7,7 @@ import { checkIcon } from '@progress/kendo-svg-icons';
 
 export default function NewsletterSection() {
   return (
-    <section className="k-bg-app-surface k-py-8">
+    <section id="contact" className="k-bg-app-surface k-py-8">
       <div
         className="k-d-flex k-flex-col k-gap-5 k-gap-md-10 k-align-items-center k-py-8 k-py-md-16 k-px-4 k-px-md-19 k-px-lg-24 k-bg-primary k-color-white k-rounded-xl k-mx-auto k-box-sizing-border"
         style={{ maxWidth: '935px', marginTop: '0' }}  

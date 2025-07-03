@@ -13,6 +13,13 @@ import { SvgIcon } from '@progress/kendo-react-common';
 import { menuIcon } from '@progress/kendo-svg-icons';
 
 export default function Header() {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="k-d-contents">
       <AppBar
@@ -22,18 +29,18 @@ export default function Header() {
       >
         <AppBarSection className="k-container !k-flex-row k-px-4">
           <div className="k-d-flex k-flex-basis-0 k-flex-grow">
-            <a className="k-d-flex" href="#">
+            <a className="k-d-flex" href="#" onClick={() => scrollToSection('hero')}>
               <Image src="/logo.svg" alt="Logo" width={128} height={36} />
             </a>
           </div>
           <div className="k-d-none k-d-lg-flex k-flex-basis-0 k-flex-grow k-justify-content-center">
             <Menu>
-              <MenuItem text="Home"></MenuItem>
-              <MenuItem text="About"></MenuItem>
-              <MenuItem text="Solutions"></MenuItem>
-              <MenuItem text="Features"></MenuItem>
-              <MenuItem text="Pricing"></MenuItem>
-              <MenuItem text="Testimonials"></MenuItem>
+              <MenuItem text="Home" onClick={() => scrollToSection('hero')} />
+              <MenuItem text="Solutions" onClick={() => scrollToSection('solutions')} />
+              <MenuItem text="Features" onClick={() => scrollToSection('features')} />
+              <MenuItem text="Testimonials" onClick={() => scrollToSection('testimonials')} />
+              <MenuItem text="Portfolio" onClick={() => scrollToSection('portfolio')} />
+              <MenuItem text="Contact" onClick={() => scrollToSection('contact')} />
             </Menu>
           </div>
     
