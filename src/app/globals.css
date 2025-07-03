@@ -321,3 +321,34 @@ hr {
 .k-card-header {
   border: none !important;
 }
+
+.testimonials-container {
+  width: 100%;
+  height: 300px;
+  margin: 2rem 0;
+}
+
+.testimonials-container .k-scrollview {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.testimonials-container .k-scrollview-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.testimonial-item {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.testimonial-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
