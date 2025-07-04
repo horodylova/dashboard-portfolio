@@ -23,7 +23,7 @@ export default function Header() {
         <AppBarSection className="k-container !k-flex-row k-px-4">
           <div className="k-d-flex k-flex-basis-0 k-flex-grow">
             <a className="k-d-flex" href="#">
-              <Image src="/logo.svg" alt="Logo" width={128} height={36} />
+              <Image src="/my-logo.png" alt="Logo" width={128} height={100} />
             </a>
           </div>
           <div className="k-d-none k-d-lg-flex k-flex-basis-0 k-flex-grow k-justify-content-center">
