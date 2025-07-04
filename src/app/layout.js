@@ -5,10 +5,10 @@ import { Metadata } from "next";
 
 export const metadata = {
   title: "Svitlana Horodylova",
-  description: "Portfolio of dashboard projects",
+  description: "Happy to discuss the dashboard details and your key requirements during the call",
   openGraph: {
     title: "Svitlana Horodylova",
-    description: "Portfolio of dashboard projects",
+    description: "Happy to discuss the dashboard details and your key requirements during the call",
     images: [
       {
         url: "/photo-1.png",
@@ -17,16 +17,9 @@ export const metadata = {
         alt: "Svitlana Horodylova"
       }
     ],
-    locale: "en_US",
+    locale: "en_UK",
     type: "website",
     siteName: "Svitlana Horodylova Portfolio"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Svitlana Horodylova",
-    description: "Portfolio of dashboard projects",
-    images: ["/photo-1.png"],
-    creator: "@svitlanahorodylova"
   }
 };
 
