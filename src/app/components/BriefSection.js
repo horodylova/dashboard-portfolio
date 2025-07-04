@@ -22,14 +22,14 @@ export default function BriefSection() {
           <Button 
             themeColor="tertiary" 
             size="large"
-            onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSfim4aY2RVBMbU50ez6QGnZ6EQJaXs26vlIYg_0A8KfUTi7Lw/viewform?usp=dialog', '_blank')}
+            onClick={() => window.open('https://forms.gle/7yJVFu8Z2DRiXb64A', '_blank')}
           >
             Start in English
           </Button>
           <Button 
             themeColor="tertiary" 
             size="large"
-            onClick={() => window.open('https://forms.google.com/your-ukrainian-form-link', '_blank')}
+            onClick={() => window.open('https://forms.gle/Rgn8jK63LzAy1maM7', '_blank')}
           >
             Почати українською
           </Button>
