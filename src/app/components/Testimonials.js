@@ -60,12 +60,13 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="k-bg-app-surface k-py-8 k-py-md-15 k-py-lg-24">
-      <div className="k-container k-align-items-center k-px-4">
+    <section id="testimonials" className="k-bg-surface k-py-8 k-py-md-15 k-py-lg-24">
+      <div className="k-container k-gap-5 k-gap-md-10 k-gap-lg-14 k-align-items-center k-px-4">
         <div className="k-d-flex k-flex-col k-align-items-center k-gap-4">
-          <h2 className="k-h2 !k-m-0 k-color-primary k-text-center">
-          Real Results, Real Feedback
-          </h2>
+          <h2 className="k-h2 !k-m-0 k-color-primary k-text-center">Client Stories</h2>
+          <p className="k-text-center k-color-subtle !k-m-0">
+            Real stories from people I’ve worked with — projects and partnerships
+          </p>
         </div>
       
         <div style={{ minHeight: `${maxCardHeight + 20}px` }}>

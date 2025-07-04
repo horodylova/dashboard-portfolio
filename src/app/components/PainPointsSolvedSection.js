@@ -18,11 +18,11 @@ export default function PainPointsSolvedSection() {
    
         <div className="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-14">
           <div className="k-d-flex k-flex-col k-gap-4">
-            <h2 className="k-h2 !k-m-0 k-color-primary">
-              Actionable Sales Reports to grow your business
+            <h2 className="k-h3 !k-m-0 k-color-primary">
+              Actionable Sales Dashboards to Simplify Your Decisions
             </h2>
             <p className="k-font-size-lg k-color-subtle !k-m-0">
-            Stop guessing about your ads or losing bookings in your CRM. My dashboards provide real-time sales reports from Facebook, Instagram, Google and CRM data using React, Kendo UI, and API integrations. Instantly see what drives your revenue and make smarter business decisions.            </p>
+            Tired of scattered reports, lost leads, and guessing what your customers want? I create clear, intuitive dashboards that show how your ads on Facebook, Instagram, or Google are actually performing — and how your customers behave in your CRM. See exactly where you're making money and where you're losing opportunities</p>
           </div>
           <div className="k-d-flex k-flex-col k-gap-10">
             <div className="k-d-flex k-gap-4">
@@ -36,11 +36,11 @@ export default function PainPointsSolvedSection() {
               </div>
               <div className="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-2">
                 <div className="k-d-flex k-font-size-lg k-color-primary">
-                  Fast adoption and web-readiness
+                  Fast and Simple to Start
                 </div>
                 <div className="k-d-flex">
                   <p className="!k-m-0">
-                  Dashboards ready to use in your browser, on any device. Integration with your tools — from Google Sheets to complex CRMs — takes days, not weeks, using Make.com, Zapier, or custom APIs.
+                  No complicated installations — my dashboards are accessible directly in your browser from day one. Connect your existing tools (from simple Google Sheets to sophisticated CRM systems) in days instead of weeks, thanks to smart integrations
                   </p>
                 </div>
               </div>
@@ -56,11 +56,11 @@ export default function PainPointsSolvedSection() {
               </div>
               <div className="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-2">
                 <div className="k-d-flex k-font-size-lg k-color-primary">
-                  Automation and instant notifications
+                  Automated Notifications to Stay Ahead
                 </div>
                 <div className="k-d-flex">
                   <p className="!k-m-0">
-                  Never miss a lead or booking. Automated data flows and smart alerts keep you instantly informed about bookings, cancellations, and sync issues.
+                  Stop missing leads or important sales updates. You'll get instant alerts whenever a customer books, cancels, or if there's an integration issue — so you can act immediately and confidently
                   </p>
                 </div>
               </div>

@@ -34,14 +34,10 @@ export default function FeaturesSection() {
                 </div>
                 <div className="k-d-flex">
                   <p className="k-color-subtle !k-m-0">
-                  Receive clear, interactive dashboards tailored to your needs — with real-time updates, advanced filters and detailed visualisations. Your key metrics are always at your fingertips, accessible on any device.
+                  Receive clear, interactive dashboards tailored to your needs — with real-time updates, advanced filters and detailed visualisations. Your key metrics are always at your fingertips, accessible on any device
                   </p>
                 </div>
-                <div className="k-d-flex">
-                  <Button size="small" fillMode="flat" themeColor="primary">
-                    Learn more
-                  </Button>
-                </div>
+               
               </div>
             </div>
             <div className="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-4 k-p-6 k-bg-surface k-rounded-md">
@@ -61,14 +57,10 @@ export default function FeaturesSection() {
                 </div>
                 <div className="k-d-flex">
                   <p className="k-color-subtle !k-m-0">
-                  I connect your data sources — CRM, cloud services, financial tools or bespoke systems — into one streamlined platform. Enjoy reliable, automated data flows so you always work with up-to-date information, without manual exporting.
+                  I connect your data sources — CRM, cloud services, financial tools or bespoke systems — into one streamlined platform. Enjoy reliable, automated data flows so you always work with up-to-date information, without manual exporting
                   </p>
                 </div>
-                <div className="k-d-flex">
-                  <Button size="small" fillMode="flat" themeColor="primary">
-                    Learn more
-                  </Button>
-                </div>
+                
               </div>
             </div>
             <div className="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-4 k-p-6 k-bg-surface k-rounded-md">
@@ -88,14 +80,10 @@ export default function FeaturesSection() {
                 </div>
                 <div className="k-d-flex">
                   <p className="k-color-subtle !k-m-0">
-                  Automate repetitive tasks, integrate with services like Zapier, Make.com and n8n, and receive instant alerts for errors or important events. Stay in control and respond quickly, ensuring nothing is missed.
+                  Automate repetitive tasks, integrate with services like Zapier, Make.com and n8n, and receive instant alerts for errors or important events. Stay in control and respond quickly, ensuring nothing is missed
                   </p>
                 </div>
-                <div className="k-d-flex">
-                  <Button size="small" fillMode="flat" themeColor="primary">
-                    Learn more
-                  </Button>
-                </div>
+                
               </div>
             </div>
           </div>

@@ -28,7 +28,7 @@ export default function Footer() {
       <div className="k-container">
         <div className="k-d-grid k-grid-cols-1 k-grid-cols-md-2 k-grid-cols-lg-4 k-gap-5 k-px-4">
           <div className="k-d-flex k-flex-col k-gap-10">
-            <Image src="/logo.svg" alt="Logo" width={128} height={36} />
+            <Image src="/Made with insMind-my_logo.png" alt="Logo" width={128} height={36} />
             <div className="k-d-flex k-flex-col k-gap-4">
               
               <a 
@@ -104,7 +104,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="k-d-flex k-justify-content-center k-mt-8">
-          <p className="k-text-center">Copyright © 2024 Svitlana Horodylova. All rights reserved.</p>
+          <p className="k-text-center">Copyright © 2024 Svitlana Horodylova. All rights reserved</p>
         </div>
       </div>
     </footer>

@@ -51,7 +51,7 @@ export default function Header() {
               e.preventDefault();
               scrollToSection('hero');
             }}>
-              <Image src="/logo.svg" alt="Logo" width={128} height={36} />
+              <Image src="/Made with insMind-my_logo.png" alt="Logo" width={128} height={36} />
             </a>
           </div>
           
@@ -97,7 +97,7 @@ export default function Header() {
                 onClick={() => scrollToSection('contact')}
                 style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer' }}
               >
-                Contact
+                Brief
               </button>
             </nav>
           </div>

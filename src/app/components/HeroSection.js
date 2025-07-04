@@ -10,6 +10,22 @@ export default function HeroSection() {
 
   return (
     <section id="hero" className="k-bg-surface k-py-8 k-py-md-10 k-py-lg-25">
+    
+      <div className="k-d-flex k-d-md-none k-justify-content-center k-mb-8">
+        <div
+          className="k-pos-relative"
+          style={{
+            width: "100%",
+            maxWidth: "400px",
+            height: "400px",
+            backgroundImage: 'url("/photo-4.png")',
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        ></div>
+      </div>
+      
       <div className="k-container !k-flex-row k-gap-5 k-px-4">
         <div className="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-12 k-gap-md-10">
           <div className="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-5 k-gap-sm-6 k-gap-md-12">
@@ -17,9 +33,19 @@ export default function HeroSection() {
               <h1 className="k-h2 !k-m-0">
                 Custom dashboards, smart analytics, zero blind spots
               </h1>
-              <p className="k-font-size-lg !k-m-0">
-                I help you automate, monitor, and grow — with React, Kendo UI,
-                and seamless API integrations.
+              <p className="k-font-size-lg !k-m-0" style={{
+                color: "var(--kendo-color-primary)",
+                fontWeight: "500",
+                letterSpacing: "0.02em",
+                lineHeight: "1.6",
+                maxWidth: "90%",
+                padding: "0.5rem 0",
+                borderLeft: "3px solid var(--kendo-color-tertiary)",
+                paddingLeft: "1rem",
+                marginLeft: "-1rem",
+                transition: "all 0.3s ease",
+              }}>
+                I'm Svitlana, and I create dashboards that help you quickly see what your customers are really doing
               </p>
             </div>
             <div className="k-d-flex k-flex-col k-flex-sm-row k-align-items-start k-gap-5">
@@ -106,9 +132,8 @@ export default function HeroSection() {
               width: "100%",
               maxWidth: "600px",
               height: "600px",
-              backgroundImage: 'url("/hero-l-1.svg")',
+              backgroundImage: 'url("/photo-4.png")',
               backgroundSize: "contain",
-              backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }}
           ></div>
