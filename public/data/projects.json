@@ -1,0 +1,40 @@
+{
+    "projects": [
+      {
+        "title": "Energy Dashboard",
+        "description": "A real-time chart built with Kendo UI, visualising data from Octopus Energy",
+        "image": "/energy-h.svg",
+        "link": "https://energy-monitoring-dash-git-87bc6a-svitlana-horodylovas-projects.vercel.app/"
+      },
+      {
+        "title": "Hotel Booking Management Dashboard",
+        "description": "Enhanced data visibility and streamlined operations, improving workflow and reporting for hospitality businesses",
+        "image": "/hotel_h.svg",
+        "link": "https://booking-management-dashboard-for-ho.vercel.app/"
+      },
+      {
+        "title": "SaaS Analytics Dashboard",
+        "description": "SaaS dashboard for tracking key metrics like MRR, ARR, orders, and customers",
+        "image": "/saas_h.svg",
+        "link": "https://dashboard-saas-mrr-arr.vercel.app/"
+      },
+      {
+        "title": "Interactive map with graphs",
+        "description": "Geographical mapping with statistical data analysis",
+        "image": "/map_h.svg",
+        "link": "https://map-production-3657.up.railway.app/"
+      },
+      {
+        "title": "Water Tracker",
+        "description": "A website to monitor daily water consumption",
+        "image": "/water_h.svg",
+        "link": "https://horodylova.github.io/project-AquaSquad/"
+      },
+      {
+        "title": "GitHub Activity Dashboard",
+        "description": "It connects to the GitHub API to fetch contribution data and displays it in an intuitive monthly view",
+        "image": "/github_h.svg",
+        "link": "https://svitlana-horodylova.it.com/"
+      } 
+    ]
+  }

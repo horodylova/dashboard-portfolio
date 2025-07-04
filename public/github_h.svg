@@ -1,0 +1,21 @@
+<svg width="360" height="140" viewBox="0 0 360 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="360" height="140" rx="18" fill="#F7F7F8"/>
+  <rect x="30" y="28" width="300" height="80" rx="14" fill="#E0E9FA"/>
+  <!-- Contributions grid -->
+  <rect x="60" y="48" width="12" height="12" rx="3" fill="#225AC8"/>
+  <rect x="78" y="48" width="12" height="12" rx="3" fill="#FFB13D"/>
+  <rect x="96" y="48" width="12" height="12" rx="3" fill="#71C441"/>
+  <rect x="114" y="48" width="12" height="12" rx="3" fill="#9AA0AC"/>
+  <rect x="132" y="48" width="12" height="12" rx="3" fill="#E11428"/>
+  <rect x="150" y="48" width="12" height="12" rx="3" fill="#225AC8" opacity="0.4"/>
+  <rect x="168" y="48" width="12" height="12" rx="3" fill="#FFB13D" opacity="0.4"/>
+  <rect x="186" y="48" width="12" height="12" rx="3" fill="#71C441" opacity="0.4"/>
+  <rect x="204" y="48" width="12" height="12" rx="3" fill="#9AA0AC" opacity="0.4"/>
+  <rect x="222" y="48" width="12" height="12" rx="3" fill="#E11428" opacity="0.4"/>
+  <!-- Activity graph -->
+  <polyline points="60,110 90,95 120,115 150,70 180,100 210,80 240,120 270,65 300,110" fill="none" stroke="#225AC8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="150" cy="70" r="6" fill="#FFB13D"/>
+  <circle cx="270" cy="65" r="6" fill="#E11428"/>
+  <circle cx="120" cy="115" r="5" fill="#71C441"/>
+  <rect x="60" y="125" width="220" height="6" rx="3" fill="#E9EAED"/>
+</svg>

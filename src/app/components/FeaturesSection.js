@@ -5,15 +5,14 @@ import { Button } from '@progress/kendo-react-buttons';
 
 export default function FeaturesSection() {
   return (
-    <section className="k-bg-app-surface k-py-8 k-py-md-15 k-py-lg-24">
+    <section id="features" className="k-bg-surface k-py-8 k-py-md-15 k-py-lg-24">
       <div className="k-container k-gap-5 k-gap-md-10 k-gap-lg-14 k-align-items-center k-px-4">
         <div className="k-d-flex k-flex-col k-align-items-center k-gap-4">
           <h2 className="k-h2 !k-m-0 k-color-primary k-text-center">
-            Features that help you build better
+          How I Make Your Data Work Smarter
           </h2>
           <p className="k-font-size-lg k-text-center k-color-subtle !k-m-0">
-            Many desktop publishing packages and web page editors now use
-            Lorem Ipsum.
+          Unlock the full potential of your data with solutions tailored to your workflow, goals, and business logic
           </p>
         </div>
         <div className="k-d-flex k-flex-col k-gap-5">
@@ -31,12 +30,11 @@ export default function FeaturesSection() {
               ></div>
               <div className="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-4">
                 <div className="k-d-flex k-font-size-xl">
-                  Website Optimization
+                Custom Interactive Dashboards
                 </div>
                 <div className="k-d-flex">
                   <p className="k-color-subtle !k-m-0">
-                    The standard chunk of Lorem Ipsum used since the 1500s is
-                    reproduced below for those interested.
+                  Receive clear, interactive dashboards tailored to your needs — with real-time updates, advanced filters and detailed visualisations. Your key metrics are always at your fingertips, accessible on any device.
                   </p>
                 </div>
                 <div className="k-d-flex">
@@ -59,12 +57,11 @@ export default function FeaturesSection() {
               ></div>
               <div className="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-4">
                 <div className="k-d-flex k-font-size-xl">
-                  Email Marketing
+                Seamless Integrations & Data Flows
                 </div>
                 <div className="k-d-flex">
                   <p className="k-color-subtle !k-m-0">
-                    The standard chunk of Lorem Ipsum used since the 1500s is
-                    reproduced below for those interested.
+                  I connect your data sources — CRM, cloud services, financial tools or bespoke systems — into one streamlined platform. Enjoy reliable, automated data flows so you always work with up-to-date information, without manual exporting.
                   </p>
                 </div>
                 <div className="k-d-flex">
@@ -87,12 +84,11 @@ export default function FeaturesSection() {
               ></div>
               <div className="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-4">
                 <div className="k-d-flex k-font-size-xl">
-                  SEO Optimization
+                Automation & Smart Notifications
                 </div>
                 <div className="k-d-flex">
                   <p className="k-color-subtle !k-m-0">
-                    The standard chunk of Lorem Ipsum used since the 1500s is
-                    reproduced below for those interested.
+                  Automate repetitive tasks, integrate with services like Zapier, Make.com and n8n, and receive instant alerts for errors or important events. Stay in control and respond quickly, ensuring nothing is missed.
                   </p>
                 </div>
                 <div className="k-d-flex">

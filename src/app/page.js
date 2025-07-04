@@ -3,8 +3,10 @@
 import React from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
+import PainPointsSolvedSection from './components/PainPointsSolvedSection';
 import FeaturesSection from './components/FeaturesSection';
-import PartnersSection from './components/PartnersSection';
+import ProjectsGrid from './components/ProjectsGrid';
+import Testimonials from './components/Testimonials';
 import NewsletterSection from './components/NewsletterSection';
 import Footer from './components/Footer';
 
@@ -14,8 +16,10 @@ export default function SaasProduct() {
       <Header />
       <main>
         <HeroSection />
+        <PainPointsSolvedSection />
         <FeaturesSection />
-        <PartnersSection />
+        <Testimonials />
+        <ProjectsGrid />
         <NewsletterSection />
       </main>
       <Footer />
