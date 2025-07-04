@@ -78,6 +78,13 @@ export default function Header() {
               >
                 Features
               </button>
+               <button 
+                className="k-button k-button-flat k-button-md k-rounded-md" 
+                onClick={() => scrollToSection('portfolio')}
+                style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer' }}
+              >
+                Portfolio
+              </button>
               <button 
                 className="k-button k-button-flat k-button-md k-rounded-md" 
                 onClick={() => scrollToSection('testimonials')}
@@ -85,13 +92,7 @@ export default function Header() {
               >
                 Testimonials
               </button>
-              <button 
-                className="k-button k-button-flat k-button-md k-rounded-md" 
-                onClick={() => scrollToSection('portfolio')}
-                style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer' }}
-              >
-                Portfolio
-              </button>
+             
               <button 
                 className="k-button k-button-flat k-button-md k-rounded-md" 
                 onClick={() => scrollToSection('contact')}

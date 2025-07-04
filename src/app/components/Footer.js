@@ -50,7 +50,7 @@ export default function Footer() {
                 onClick={() => scrollToSection('hero')} 
                 className="k-link k-text-start k-font-size-md footer-nav-button"
               >
-                Home
+                Back to top
               </button>
               <button 
                 onClick={() => scrollToSection('solutions')} 
@@ -69,6 +69,12 @@ export default function Footer() {
                 className="k-link k-text-start k-font-size-md footer-nav-button"
               >
                 Portfolio
+              </button>
+               <button 
+                onClick={() => scrollToSection('contact')} 
+                className="k-link k-text-start k-font-size-md footer-nav-button"
+              >
+                Brief
               </button>
             </div>
           </div>
@@ -95,7 +101,7 @@ export default function Footer() {
               Legal
             </div>
             <div className="footer-links-container">
-              <p className="k-mb-1">No part of this website may be copied or reproduced without written permission</p>
+              <p className="k-mb-1">No part of this website may be copied</p>
               <p className="k-mb-1">Self-employed in the UK</p>
               <p className="k-mb-1">No cookies are used on this site</p>
               <p className="k-mb-1">If you submit the brief, your details will be used only to reply to your enquiry</p>

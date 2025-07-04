@@ -15,14 +15,14 @@ export default function BriefSection() {
         <div className="k-d-flex k-flex-col k-align-items-center k-gap-4">
           <h2 className="k-h2 !k-m-0 k-text-center">Let's Work Together</h2>
           <p className="k-font-size-lg k-text-center !k-m-0">
-          To make our collaboration efficient and transparent, please fill in my short project brief (available in English and Ukrainian). This will help me quickly assess your needs and offer the best solution.
+          To make our collaboration efficient and transparent, please fill in my short project brief (available in English and Ukrainian). This will help me quickly assess your needs and offer the best solution
           </p>
         </div>
         <div className="k-d-flex k-justify-content-center k-gap-4" style={{ maxWidth: "100%" }}>
           <Button 
             themeColor="tertiary" 
             size="large"
-            onClick={() => window.open('https://docs.google.com/forms/d/10sQYKYZXn8Sdnx9OBf83BWVr8R2f-IYCljEshRujtRY/edit', '_blank')}
+            onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSfim4aY2RVBMbU50ez6QGnZ6EQJaXs26vlIYg_0A8KfUTi7Lw/viewform?usp=dialog', '_blank')}
           >
             Start in English
           </Button>
