@@ -8,6 +8,7 @@ import { arrowLeftIcon, arrowRightIcon } from '@progress/kendo-svg-icons';
 export default function Testimonials() {
   const [testimonials, setTestimonials] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
+  const [maxCardHeight, setMaxCardHeight] = useState(350);
   const testimonialsPerPage = 3;
 
   useEffect(() => {
@@ -15,6 +16,29 @@ export default function Testimonials() {
       setTestimonials(testimonialsData.testimonials);
     }
   }, []);
+
+  useEffect(() => {
+    if (testimonials.length > 0) {
+      const calculateCardHeight = (testimonial) => {
+        const baseHeight = 160; 
+       
+        const textLength = testimonial.text.length;
+        const averageCharsPerLine = 50; 
+        const lineHeight = 24; 
+        const estimatedLines = Math.ceil(textLength / averageCharsPerLine);
+        const textHeight = estimatedLines * lineHeight;
+     
+        const bufferHeight = 40;
+        
+        return baseHeight + textHeight + bufferHeight;
+      };
+      
+      const heights = testimonials.map(calculateCardHeight);
+      const maxHeight = Math.max(...heights, 320); 
+      
+      setMaxCardHeight(maxHeight + 20);
+    }
+  }, [testimonials]);
 
    const totalPages = Math.ceil(testimonials.length / testimonialsPerPage);
   
@@ -37,44 +61,68 @@ export default function Testimonials() {
 
   return (
     <section id="testimonials" className="k-bg-app-surface k-py-8 k-py-md-15 k-py-lg-24">
-      <div className="k-container k-gap-5 k-gap-md-10 k-gap-lg-14 k-align-items-center k-px-4">
+      <div className="k-container k-align-items-center k-px-4">
         <div className="k-d-flex k-flex-col k-align-items-center k-gap-4">
           <h2 className="k-h2 !k-m-0 k-color-primary k-text-center">
           Real Results, Real Feedback
           </h2>
         </div>
-        <div className="k-d-grid k-grid-cols-1 k-grid-cols-md-3 k-gap-4 k-gap-lg-5">
-          {currentTestimonials.map((testimonial, index) => (
-            <div key={index} className="k-d-flex k-flex-col k-gap-5 k-p-6 k-bg-surface-alt k-border k-border-solid k-border-border k-rounded-lg k-overflow-hidden">
-              <div className="k-d-flex k-align-items-start k-justify-content-between">
-                <div className="k-d-flex k-flex-col k-gap-1">
-                  <div className="k-font-size-lg k-line-height-md">{testimonial.name}</div>
-                  <div className="k-line-height-md k-color-subtle k-font-style-italic">
-                    {testimonial.position}
+      
+        <div style={{ minHeight: `${maxCardHeight + 20}px` }}>
+    
+          <div 
+            className="k-d-grid k-grid-cols-1 k-grid-cols-md-3 k-gap-4 k-gap-lg-5"
+            style={{ 
+              minHeight: `${maxCardHeight}px`
+            }}
+          >
+            {currentTestimonials.map((testimonial, index) => (
+              <div 
+                key={`${currentPage}-${index}`}
+                className="k-d-flex k-flex-col k-gap-5 k-p-6 k-bg-surface-alt k-border k-border-solid k-border-border k-rounded-lg"
+                style={{ 
+                  minHeight: `${maxCardHeight}px`,
+                  height: 'auto' 
+                }}
+              >
+                <div className="k-d-flex k-align-items-start k-justify-content-between">
+                  <div className="k-d-flex k-flex-col k-gap-1">
+                    <div className="k-font-size-lg k-line-height-md">{testimonial.name}</div>
+                    <div className="k-line-height-md k-color-subtle k-font-style-italic">
+                      {testimonial.position}
+                    </div>
+                  </div>
+                  <img
+                    src="/quotes.svg"
+                    alt="Quotation marks"
+                    width="75px"
+                    height="50px"
+                    style={{ flexShrink: 0 }} 
+                  />
+                </div>
+                
+                <div className="k-d-flex k-flex-col k-flex-grow">
+                  <div className="k-d-flex k-flex-col k-gap-4">
+                    <div className="k-d-flex">
+                      <p 
+                        className="!k-m-0 k-line-height-md"
+                        style={{ 
+                          wordWrap: 'break-word',
+                          overflowWrap: 'break-word',
+                          hyphens: 'auto'
+                        }}
+                      >
+                        {testimonial.text}
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <img
-                  src="/quotes.svg"
-                  alt="Quotation marks"
-                  width="75px"
-                  height="50px"
-                />
               </div>
-              <div className="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow">
-                <div className="k-d-flex k-flex-col k-gap-4">
-                  
-                  <div className="k-d-flex">
-                    <p className="!k-m-0 k-line-height-md">
-                      {testimonial.text}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
      
-        <div className="k-d-flex k-flex-col k-align-items-center k-gap-4 k-mt-8">
+        <div className="k-d-flex k-flex-col k-align-items-center k-gap-4 k-mt-4">
           <div className="k-d-flex k-align-items-center k-gap-4">
             <button 
               onClick={goToPrevPage} 

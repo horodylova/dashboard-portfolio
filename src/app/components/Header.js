@@ -113,19 +113,146 @@ export default function Header() {
           </div>
         </AppBarSection>
       </AppBar>
-      
-      {/* Мобильное меню */}
+  
       {mobileMenuOpen && (
-        <div className="k-d-lg-none k-position-fixed k-top-0 k-start-0 k-w-100 k-h-100 k-bg-white k-z-index-1050" 
-             style={{ paddingTop: '70px', transition: 'all 0.3s ease' }}>
+        <div 
+          className="k-d-lg-none k-position-fixed k-top-0 k-start-0 k-w-100 k-h-100 k-z-index-1050" 
+          style={{ 
+            backgroundColor: 'var(--kendo-color-app-surface, #ffffff)',
+            paddingTop: '70px', 
+            transition: 'all 0.3s ease',
+            zIndex: 9999
+          }}
+        >
+          
           <div className="k-container k-p-4">
-            <div className="k-d-flex k-flex-column k-gap-4">
-              <div className="k-py-2 k-border-bottom" onClick={() => scrollToSection('hero')}>Home</div>
-              <div className="k-py-2 k-border-bottom" onClick={() => scrollToSection('solutions')}>Solutions</div>
-              <div className="k-py-2 k-border-bottom" onClick={() => scrollToSection('features')}>Features</div>
-              <div className="k-py-2 k-border-bottom" onClick={() => scrollToSection('testimonials')}>Testimonials</div>
-              <div className="k-py-2 k-border-bottom" onClick={() => scrollToSection('portfolio')}>Portfolio</div>
-              <div className="k-py-2 k-border-bottom" onClick={() => scrollToSection('contact')}>Contact</div>
+            <div className="k-d-flex k-flex-column k-gap-0">
+              <div 
+                className="k-py-4 k-px-3 k-cursor-pointer k-transition-colors" 
+                onClick={() => scrollToSection('hero')}
+                style={{
+                  borderBottom: '1px solid var(--kendo-color-border, rgba(48, 52, 59, 0.10))',
+                  color: 'var(--kendo-color-on-app-surface, #30343B)',
+                  fontSize: '18px',
+                  fontWeight: '500',
+                  transition: 'all 0.2s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = 'var(--kendo-color-surface, #F7F7F8)';
+                  e.target.style.paddingLeft = '16px';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = 'transparent';
+                  e.target.style.paddingLeft = '12px';
+                }}
+              >
+                Home
+              </div>
+              <div 
+                className="k-py-4 k-px-3 k-cursor-pointer k-transition-colors" 
+                onClick={() => scrollToSection('solutions')}
+                style={{
+                  borderBottom: '1px solid var(--kendo-color-border, rgba(48, 52, 59, 0.10))',
+                  color: 'var(--kendo-color-on-app-surface, #30343B)',
+                  fontSize: '18px',
+                  fontWeight: '500',
+                  transition: 'all 0.2s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = 'var(--kendo-color-surface, #F7F7F8)';
+                  e.target.style.paddingLeft = '16px';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = 'transparent';
+                  e.target.style.paddingLeft = '12px';
+                }}
+              >
+                Solutions
+              </div>
+              <div 
+                className="k-py-4 k-px-3 k-cursor-pointer k-transition-colors" 
+                onClick={() => scrollToSection('features')}
+                style={{
+                  borderBottom: '1px solid var(--kendo-color-border, rgba(48, 52, 59, 0.10))',
+                  color: 'var(--kendo-color-on-app-surface, #30343B)',
+                  fontSize: '18px',
+                  fontWeight: '500',
+                  transition: 'all 0.2s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = 'var(--kendo-color-surface, #F7F7F8)';
+                  e.target.style.paddingLeft = '16px';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = 'transparent';
+                  e.target.style.paddingLeft = '12px';
+                }}
+              >
+                Features
+              </div>
+              <div 
+                className="k-py-4 k-px-3 k-cursor-pointer k-transition-colors" 
+                onClick={() => scrollToSection('testimonials')}
+                style={{
+                  borderBottom: '1px solid var(--kendo-color-border, rgba(48, 52, 59, 0.10))',
+                  color: 'var(--kendo-color-on-app-surface, #30343B)',
+                  fontSize: '18px',
+                  fontWeight: '500',
+                  transition: 'all 0.2s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = 'var(--kendo-color-surface, #F7F7F8)';
+                  e.target.style.paddingLeft = '16px';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = 'transparent';
+                  e.target.style.paddingLeft = '12px';
+                }}
+              >
+                Testimonials
+              </div>
+              <div 
+                className="k-py-4 k-px-3 k-cursor-pointer k-transition-colors" 
+                onClick={() => scrollToSection('portfolio')}
+                style={{
+                  borderBottom: '1px solid var(--kendo-color-border, rgba(48, 52, 59, 0.10))',
+                  color: 'var(--kendo-color-on-app-surface, #30343B)',
+                  fontSize: '18px',
+                  fontWeight: '500',
+                  transition: 'all 0.2s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = 'var(--kendo-color-surface, #F7F7F8)';
+                  e.target.style.paddingLeft = '16px';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = 'transparent';
+                  e.target.style.paddingLeft = '12px';
+                }}
+              >
+                Portfolio
+              </div>
+              <div 
+                className="k-py-4 k-px-3 k-cursor-pointer k-transition-colors" 
+                onClick={() => scrollToSection('contact')}
+                style={{
+                  borderBottom: '1px solid var(--kendo-color-border, rgba(48, 52, 59, 0.10))',
+                  color: 'var(--kendo-color-on-app-surface, #30343B)',
+                  fontSize: '18px',
+                  fontWeight: '500',
+                  transition: 'all 0.2s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = 'var(--kendo-color-surface, #F7F7F8)';
+                  e.target.style.paddingLeft = '16px';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = 'transparent';
+                  e.target.style.paddingLeft = '12px';
+                }}
+              >
+                Contact
+              </div>
             </div>
           </div>
         </div>

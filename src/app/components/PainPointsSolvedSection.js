@@ -7,7 +7,6 @@ export default function PainPointsSolvedSection() {
   return (
     <section id="solutions" className="k-bg-app-surface k-py-8 k-py-md-15 k-py-lg-24">
       <div className="k-container !k-flex-row k-gap-5 k-gap-md-10 k-gap-lg-14 k-flex-wrap k-px-4">
-        {/* Изображение (теперь слева) */}
         <div className="k-d-none k-d-md-flex k-flex-basis-0 k-flex-grow k-align-items-center k-justify-content-center" style={{ position: 'relative', minHeight: '300px' }}>
           <Image 
             src="/fts-l-1.svg" 
@@ -16,8 +15,7 @@ export default function PainPointsSolvedSection() {
             style={{ objectFit: 'contain' }} 
           />
         </div>
-        
-        {/* Текст (теперь справа) */}
+   
         <div className="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-14">
           <div className="k-d-flex k-flex-col k-gap-4">
             <h2 className="k-h2 !k-m-0 k-color-primary">

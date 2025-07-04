@@ -5,7 +5,7 @@ import { Button } from '@progress/kendo-react-buttons';
 import { SvgIcon } from '@progress/kendo-react-common';
 import { checkIcon } from '@progress/kendo-svg-icons';
 
-export default function NewsletterSection() {
+export default function BriefSection() {
   return (
     <section id="contact" className="k-bg-app-surface k-py-8">
       <div

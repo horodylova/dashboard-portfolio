@@ -7,7 +7,7 @@ import PainPointsSolvedSection from './components/PainPointsSolvedSection';
 import FeaturesSection from './components/FeaturesSection';
 import ProjectsGrid from './components/ProjectsGrid';
 import Testimonials from './components/Testimonials';
-import NewsletterSection from './components/NewsletterSection';
+import BriefSection from './components/BriefSection';
 import Footer from './components/Footer';
 
 export default function SaasProduct() {
@@ -20,7 +20,7 @@ export default function SaasProduct() {
         <FeaturesSection />
         <Testimonials />
         <ProjectsGrid />
-        <NewsletterSection />
+        <BriefSection />
       </main>
       <Footer />
     </>
