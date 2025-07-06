@@ -1,11 +1,24 @@
 'use client'
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@progress/kendo-react-buttons';
 import { SvgIcon } from '@progress/kendo-react-common';
 import { checkIcon } from '@progress/kendo-svg-icons';
 
 export default function BriefSection() {
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+    
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
+
   return (
     <section id="contact" className="k-bg-app-surface k-py-8">
       <div
@@ -14,7 +27,7 @@ export default function BriefSection() {
       >
         <div className="k-d-flex k-flex-col k-align-items-center k-gap-4">
           <h2 className="k-h2 !k-m-0 k-text-center">Let's Work Together</h2>
-          <p className="k-font-size-lg k-text-center !k-m-0">
+          <p className={`k-font-size-lg ${isMobile ? '' : 'k-text-center'} !k-m-0`}>
           To make our collaboration efficient and transparent, please fill in my short project brief (available in English and Ukrainian). This will help me quickly assess your needs and offer the best solution
           </p>
         </div>
@@ -24,14 +37,14 @@ export default function BriefSection() {
             size="large"
             onClick={() => window.open('https://forms.gle/7yJVFu8Z2DRiXb64A', '_blank')}
           >
-            Start in English
+            {isMobile ? "EN" : "Start in English"}
           </Button>
           <Button 
             themeColor="tertiary" 
             size="large"
             onClick={() => window.open('https://forms.gle/Rgn8jK63LzAy1maM7', '_blank')}
           >
-            Почати українською
+            {isMobile ? "UK" : "Почати українською"}
           </Button>
         </div>
         <div className="k-d-flex k-flex-col k-flex-sm-row k-justify-content-center k-gap-4 k-gap-sm-10 k-flex-wrap">

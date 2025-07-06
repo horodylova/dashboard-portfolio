@@ -4,11 +4,11 @@ import "./globals.css";
 import { Metadata } from "next";
 
 export const metadata = {
-  title: "Svitlana Horodylova",
-  description: "Happy to discuss the dashboard details and your key requirements during the call",
+  title: "Svitlana Horodylova Portfolio",
+  description: "Interactive dashboards and data visualization solutions for businesses",
   openGraph: {
-    title: "Svitlana Horodylova",
-    description: "Happy to discuss the dashboard details and your key requirements during the call",
+    title: "Svitlana Horodylova Portfolio",
+    description: "Interactive dashboards and data visualization solutions for businesses",
     images: [
       {
         url: "/photo-1.png",
@@ -19,7 +19,7 @@ export const metadata = {
     ],
     locale: "en_UK",
     type: "website",
-    siteName: "Svitlana Horodylova Portfolio"
+    siteName: "Dashboard Developer"
   }
 };
 

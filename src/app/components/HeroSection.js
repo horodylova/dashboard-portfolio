@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { Button } from "@progress/kendo-react-buttons";
 import { SvgIcon } from "@progress/kendo-react-common";
-import { checkIcon, playSmIcon } from "@progress/kendo-svg-icons";
+import { checkIcon, playSmIcon, closeIcon } from "@progress/kendo-svg-icons";
 
 export default function HeroSection() {
   const [showVideo, setShowVideo] = useState(false);
@@ -26,9 +26,11 @@ export default function HeroSection() {
         ></div>
       </div>
       
-      <div className="k-container !k-flex-row k-gap-5 k-px-4">
-        <div className="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-12 k-gap-md-10">
-          <div className="k-d-flex k-flex-col k-flex-basis-0 k-flex-grow k-gap-5 k-gap-sm-6 k-gap-md-12">
+      <div className="k-container k-px-4">
+    
+        <div className="k-d-flex k-flex-row k-gap-5 k-mb-12">
+         
+          <div className="k-flex-basis-0 k-flex-grow">
             <div className="k-d-flex k-flex-col k-gap-4">
               <h1 className="k-h2 !k-m-0">
                 Custom dashboards, smart analytics, zero blind spots
@@ -48,54 +50,148 @@ export default function HeroSection() {
                 I'm Svitlana, and I create dashboards that help you quickly see what your customers are really doing
               </p>
             </div>
-            <div className="k-d-flex k-flex-col k-flex-sm-row k-align-items-start k-gap-5">
-              <a
-                href="https://www.upwork.com/freelancers/svitlanah11?mp_source=share"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: "none" }}
-              >
-                <Button
-                  size="large"
-                  themeColor="primary"
-                  className="!k-line-height-md"
-                >
-                  Review My Data
-                </Button>
-              </a>
+          </div>
+          
+        
+          <div className="k-d-none k-d-md-flex k-flex-basis-0 k-flex-grow k-align-items-center k-justify-content-center">
+            <div
+              className="k-pos-relative"
+              style={{
+                width: "100%",
+                maxWidth: "600px",
+                height: "400px", 
+                backgroundImage: 'url("/photo-4.png")',
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+              }}
+            ></div>
+          </div>
+        </div>
+
+    
+        <div className="k-d-flex k-flex-col k-gap-12">
+          <div className="k-d-flex k-flex-col k-flex-sm-row k-align-items-start k-gap-5">
+            <a
+              href="https://www.upwork.com/freelancers/svitlanah11?mp_source=share"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
               <Button
                 size="large"
-                icon="play-sm"
                 themeColor="primary"
-                svgIcon={playSmIcon}
-                fillMode="outline"
                 className="!k-line-height-md"
-                onClick={() => setShowVideo(true)}
               >
-                Watch 40s Demo
+                Review My Data
               </Button>
-            </div>
-            {showVideo && (
-              <div
+            </a>
+            <Button
+              size="large"
+              icon="play-sm"
+              themeColor="primary"
+              svgIcon={playSmIcon}
+              fillMode="outline"
+              className="!k-line-height-md"
+              onClick={() => setShowVideo(true)}
+            >
+              Watch 40s Demo
+            </Button>
+          </div>
+         
+          {showVideo && (
+            <div
+              style={{
+                position: "relative",
+                borderRadius: "20px",
+                overflow: "hidden",
+                boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
+                maxWidth: "560px",
+                width: "100%",
+                margin: "0 auto",
+                backgroundColor: "#000",
+              }}
+            >
+        
+              <button
+                onClick={() => setShowVideo(false)}
                 style={{
-                  borderRadius: "20px",
-                  overflow: "hidden",
-                  boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
-                  maxWidth: 560,
-                  margin: "32px auto 0",
+                  position: "absolute",
+                  top: "15px",
+                  right: "15px",
+                  zIndex: 20,
+                  backgroundColor: "rgba(0, 0, 0, 0.8)",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "50%",
+                  width: "40px",
+                  height: "40px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  cursor: "pointer",
+                  fontSize: "20px",
+                  fontWeight: "bold",
+                  transition: "all 0.2s ease",
+                  boxShadow: "0 2px 8px rgba(0,0,0,0.3)"
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = "rgba(255, 0, 0, 0.8)";
+                  e.target.style.transform = "scale(1.1)";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+                  e.target.style.transform = "scale(1)";
                 }}
               >
-                <iframe
-                  width="100%"
-                  height="315"
-                  src="https://www.youtube.com/embed/gR7CfFf72cc"
-                  title="40-Second Demo"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                ×
+              </button>
+             
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: "10px",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  zIndex: 20,
+                }}
+              >
+                <Button
+                  size="small"
+                  themeColor="primary"
+                  fillMode="solid"
+                  onClick={() => setShowVideo(false)}
+                  style={{
+                    backgroundColor: "rgba(0, 0, 0, 0.8)",
+                    color: "white",
+                    border: "1px solid rgba(255, 255, 255, 0.3)",
+                    borderRadius: "20px",
+                    padding: "8px 16px",
+                    fontSize: "12px",
+                    fontWeight: "500",
+                    boxShadow: "0 2px 8px rgba(0,0,0,0.3)"
+                  }}
+                >
+                  Close Video
+                </Button>
               </div>
-            )}
-          </div>
+              
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/gR7CfFf72cc"
+                title="40-Second Demo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{
+                  border: "none",
+                  display: "block"
+                }}
+              ></iframe>
+            </div>
+          )}
+          
+         
           <div className="k-d-flex k-flex-col k-gap-5">
             <div className="k-d-flex k-flex-col k-flex-sm-row k-gap-5">
               <div className="k-d-flex k-align-items-center k-gap-2.5">
@@ -124,19 +220,6 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="k-d-none k-d-md-flex k-flex-basis-0 k-flex-grow k-align-items-center k-justify-content-center">
-          <div
-            className="k-pos-relative"
-            style={{
-              width: "100%",
-              maxWidth: "600px",
-              height: "600px",
-              backgroundImage: 'url("/photo-4.png")',
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></div>
         </div>
       </div>
     </section>

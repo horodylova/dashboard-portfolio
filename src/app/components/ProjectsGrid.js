@@ -1,35 +1,71 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { TileLayout } from '@progress/kendo-react-layout';
-import { Pager } from '@progress/kendo-react-data-tools';
+import { Button } from '@progress/kendo-react-buttons';
+import { SvgIcon } from '@progress/kendo-react-common';
+import { arrowLeftIcon, arrowRightIcon } from '@progress/kendo-svg-icons';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function ProjectsGrid() {
   const [projects, setProjects] = useState([]);
-  const [dataState, setDataState] = useState({
-    skip: 0,
-    take: 3,  
-  });
-  const [tilePositions, setTilePositions] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const [tiles, setTiles] = useState([]);
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+  const tileContainerRef = useRef(null);
+
+  const minSwipeDistance = 50;
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+    
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
 
   useEffect(() => {
     fetch('/data/projects.json')
       .then((response) => response.json())
       .then((data) => {
         setProjects(data.projects);
-        createTilesAndPositions(data.projects);
+        createTiles(data.projects);
       })
       .catch((error) => console.error('Error loading projects:', error));
   }, []);
 
-  const createTilesAndPositions = (projectsData) => {
-    const newTiles = [];
-    const positions = [];
+  const onTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
 
-    projectsData.forEach((project, index) => {
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    
+    if (isLeftSwipe) {
+      goToNext();
+    } else if (isRightSwipe) {
+      goToPrevious();
+    }
+  };
+
+  const createTiles = (projectsData) => {
+    const newTiles = [];
+
+    projectsData.forEach((project) => {
       const isVertical = project.image.includes('-v');
       const isGithubImage = project.image === '/github-v.png';
 
@@ -37,64 +73,61 @@ export default function ProjectsGrid() {
         header: "",  
         body: (
           <div className="project-tile">
-            <Link href={project.link} target="_blank" rel="noopener noreferrer">
-              <div className={`project-image-container ${isVertical ? 'vertical' : 'horizontal'}`}>
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  priority={isGithubImage}
-                  style={{ objectFit: 'contain', padding: '10px' }}
-                  className="project-image"
-                />
-              </div>
-              <div className="project-info">
+            <div className={`project-image-container ${isVertical ? 'vertical' : 'horizontal'}`}>
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                priority={isGithubImage}
+                style={{ objectFit: 'contain', padding: '10px' }}
+                className="project-image"
+              />
+            </div>
+            <div className="project-info">
+              <Link href={project.link} target="_blank" rel="noopener noreferrer">
                 <h3 className="k-h5 k-color-primary" style={{ textDecoration: 'none' }}>{project.title}</h3>
-                <p>{project.description}</p>
-              </div>
-            </Link>
+              </Link>
+              <p>{project.description}</p>
+            </div>
           </div>
         ),
       });
-
-       const positionInGroup = index % 3;
-
-      let position;
-      if (positionInGroup === 0) {
-        position = {
-          col: 1,
-          row: 1,  
-          colSpan: 1,
-          rowSpan: 2,
-        };
-      } else if (positionInGroup === 1) {
-        position = {
-          col: 2,
-          row: 1, 
-          colSpan: 2,
-          rowSpan: 1,
-        };
-      } else {
-        position = {
-          col: 2,
-          row: 2,  
-          colSpan: 2,
-          rowSpan: 1,
-        };
-      }
-
-      positions.push(position);
     });
 
     setTiles(newTiles);
-    setTilePositions(positions);
   };
 
-   const getCurrentPageItems = () => {
-    const currentTiles = tiles.slice(dataState.skip, dataState.skip + dataState.take);
+  const getCurrentPageItems = () => {
+    if (projects.length === 0 || tiles.length === 0) {
+      return { currentTiles: [], currentPositions: [] };
+    }
     
-     const currentPositions = currentTiles.map((_, index) => {
+    const itemsPerPage = isMobile ? 1 : 3;
+    const startIndex = currentIndex % projects.length;
+    
+    let currentTiles = [];
+    
+    if (isMobile) {
+      currentTiles = [tiles[startIndex]];
+    } else {
+      currentTiles = [];
+      for (let i = 0; i < itemsPerPage; i++) {
+        const index = (startIndex + i) % projects.length;
+        currentTiles.push(tiles[index]);
+      }
+    }
+    
+    const currentPositions = currentTiles.map((_, index) => {
+      if (isMobile) {
+        return {
+          col: 1,
+          row: 1,
+          colSpan: 3,
+          rowSpan: 2,
+        };
+      }
+      
       const positionInGroup = index % 3;
       
       if (positionInGroup === 0) {
@@ -124,12 +157,16 @@ export default function ProjectsGrid() {
     return { currentTiles, currentPositions };
   };
 
-  const handlePageChange = (e) => {
-    setDataState({
-      ...dataState,
-      skip: e.skip,
-      take: e.take,
-    });
+  const goToPrevious = () => {
+    const itemsPerPage = isMobile ? 1 : 3;
+    const totalItems = projects.length;
+    setCurrentIndex((currentIndex - itemsPerPage + totalItems) % totalItems);
+  };
+
+  const goToNext = () => {
+    const itemsPerPage = isMobile ? 1 : 3;
+    const totalItems = projects.length;
+    setCurrentIndex((currentIndex + itemsPerPage) % totalItems);
   };
 
   const { currentTiles, currentPositions } = getCurrentPageItems();
@@ -145,7 +182,13 @@ export default function ProjectsGrid() {
         </div>
 
         <div className="projects-grid-container">
-          <div style={{ minHeight: 'auto' }}>
+          <div 
+            style={{ minHeight: 'auto' }}
+            ref={tileContainerRef}
+            onTouchStart={isMobile ? onTouchStart : undefined}
+            onTouchMove={isMobile ? onTouchMove : undefined}
+            onTouchEnd={isMobile ? onTouchEnd : undefined}
+          >
             {projects.length > 0 && tiles.length > 0 && (
               <TileLayout
                 columns={3}
@@ -158,15 +201,27 @@ export default function ProjectsGrid() {
             )}
           </div>
 
-          {projects.length > dataState.take && (
-            <div style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '20px' }}>
-              <Pager
-                skip={dataState.skip}
-                take={dataState.take}
-                total={projects.length}
-                onPageChange={handlePageChange}
-                className="pager-container"
-              />
+          {projects.length > (isMobile ? 1 : 3) && (
+            <div className="k-d-flex k-justify-content-center k-align-items-center k-gap-4 k-mt-5">
+              <Button
+                themeColor="tertiary"
+                fillMode="solid"
+                onClick={goToPrevious}
+                aria-label="Previous projects"
+              >
+                <SvgIcon icon={arrowLeftIcon} />
+              </Button>
+              <span className="k-color-primary k-font-weight-bold" style={{ fontSize: '1rem', padding: '0 0.5rem', backgroundColor: 'var(--kendo-color-primary-subtle)', borderRadius: 'var(--kendo-border-radius-md)' }}>
+                {isMobile ? `${currentIndex + 1} of ${projects.length}` : `${currentIndex + 1} - ${Math.min(currentIndex + 3, projects.length)} of ${projects.length}`}
+              </span>
+              <Button
+                themeColor="tertiary"
+                fillMode="solid"
+                onClick={goToNext}
+                aria-label="Next projects"
+              >
+                <SvgIcon icon={arrowRightIcon} />
+              </Button>
             </div>
           )}
         </div>
