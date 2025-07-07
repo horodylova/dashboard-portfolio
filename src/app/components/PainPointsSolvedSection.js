@@ -71,7 +71,7 @@ export default function PainPointsSolvedSection() {
                 position: 'relative'
               }}>
                 <Image 
-                  src="/feature-1.svg" 
+                  src="/feature-4.svg" 
                   alt="Feature 1" 
                   fill 
                   style={{ objectFit: 'contain' }} 

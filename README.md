@@ -40,5 +40,4 @@ Unlock the full potential of your data with solutions tailored to your workflow,
 ## Contact
 To make our collaboration efficient and transparent, please fill in my short project brief
 
-
-© 2024 Svitlana Horodylova | Dashboard Developer
+© 2025 Svitlana Horodylova | Dashboard Developer

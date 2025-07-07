@@ -84,7 +84,7 @@ export default function Footer() {
             <div className="footer-divider k-mb-6"></div>
             <div className="k-d-flex k-justify-content-between k-align-items-center k-flex-wrap k-gap-4">
               <p className="k-color-subtle k-mb-0 k-font-size-sm">
-                © 2024 Svitlana Horodylova. All rights reserved
+                © 2025 Svitlana Horodylova. All rights reserved
               </p>
               <div className="footer-made-with k-color-subtle k-font-size-sm">
                 Made with care in the UK
