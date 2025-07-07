@@ -13,7 +13,7 @@ export default function Footer() {
             <div className="k-d-flex k-flex-col k-gap-6">
               <div className="footer-brand-section">
                 <Image 
-                  src="/Made with insMind-my_logo.png" 
+                  src="/logo3.png" 
                   alt="Logo" 
                   width={128} 
                   height={36}

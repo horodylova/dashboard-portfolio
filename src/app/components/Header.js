@@ -68,7 +68,7 @@ export default function Header() {
                 e.preventDefault();
                 scrollToSection('hero');
               }}>
-                <Image src="/Made with insMind-my_logo.png" alt="Logo" width={128} height={36} />
+                <Image src="/logo3.png" alt="Logo" width={128} height={36} />
               </a>
             </div>
             
