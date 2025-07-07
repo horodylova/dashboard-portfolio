@@ -3,10 +3,10 @@ import "@progress/kendo-theme-utils/dist/all.css";
 import "./globals.css";
 
 export const metadata = {
-  title: "Svitlana Horodylova Portfolio",
+  title: "Svitlana Horodylova",
   description: "Interactive dashboards and data visualization solutions for businesses",
   openGraph: {
-    title: "Svitlana Horodylova Portfolio",
+    title: "Svitlana Horodylova",
     description: "Interactive dashboards and data visualization solutions for businesses",
     images: [
       {
