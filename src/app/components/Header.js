@@ -89,6 +89,19 @@ export default function Header() {
                 </button>
                 <button 
                   className="k-button k-button-flat k-button-md k-rounded-md" 
+                  onClick={() => scrollToSection('skills')}
+                  style={{ 
+                    background: 'none', 
+                    border: 'none', 
+                    color: 'inherit', 
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease'
+                  }}
+                >
+                  Skills
+                </button>
+                <button 
+                  className="k-button k-button-flat k-button-md k-rounded-md" 
                   onClick={() => scrollToSection('solutions')}
                   style={{ 
                     background: 'none', 
