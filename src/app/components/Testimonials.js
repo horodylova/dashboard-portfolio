@@ -14,7 +14,6 @@ export default function Testimonials() {
   const [touchEnd, setTouchEnd] = useState(null);
   const testimonialContainerRef = useRef(null);
   
-  // Минимальное расстояние свайпа для срабатывания (в пикселях)
   const minSwipeDistance = 50;
   
   useEffect(() => {
@@ -104,16 +103,16 @@ export default function Testimonials() {
 
   return (
     <section id="testimonials" className="k-bg-surface k-py-8 k-py-md-15 k-py-lg-24">
-      <div className="k-container k-gap-5 k-gap-md-10 k-gap-lg-14 k-align-items-center k-px-4">
+      <div className="k-container k-gap-5 k-align-items-center k-px-4">
         <div className="k-d-flex k-flex-col k-align-items-center k-gap-4">
-          <h2 className="k-h2 !k-m-0 k-color-primary k-text-center">Client Stories</h2>
+          <h2 className="k-h2 !k-m-0 k-color-primary k-text-center">Testimonials</h2>
           <p className="k-text-center k-color-subtle !k-m-0">
-            Real stories from people I've worked with — projects and partnerships
+            {isMobile ? "Real stories from people I've worked with" : "Real stories from people I've worked with — projects and partnerships"}
           </p>
         </div>
       
         <div 
-          style={{ minHeight: `${maxCardHeight + 20}px` }}
+          style={{ minHeight: `${maxCardHeight + (isMobile ? 10 : 20)}px` }}
           ref={testimonialContainerRef}
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}

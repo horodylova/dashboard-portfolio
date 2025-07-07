@@ -176,7 +176,7 @@ export default function ProjectsGrid() {
     <div className="k-container k-gap-5 k-gap-md-10 k-gap-lg-14 k-align-items-center k-px-4">
         <div className="k-d-flex k-flex-col k-align-items-center k-gap-4">
           <h2 className="k-h2 !k-m-0 k-color-primary k-text-center">Portfolio Highlights</h2>
-          <p className="k-text-center k-color-subtle !k-m-0">
+          <p className="k-font-size-lg k-text-start k-text-md-center k-color-subtle !k-m-0">
             Explore my recent projects showcasing data visualization and dashboard design
           </p>
         </div>

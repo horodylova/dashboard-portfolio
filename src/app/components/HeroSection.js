@@ -9,15 +9,15 @@ export default function HeroSection() {
   const [showVideo, setShowVideo] = useState(false);
 
   return (
-    <section id="hero" className="k-bg-surface k-py-8 k-py-md-10 k-py-lg-25">
+    <section id="hero" className="k-bg-surface k-py-4 k-py-md-10 k-py-lg-25">
     
-      <div className="k-d-flex k-d-md-none k-justify-content-center k-mb-8">
+      <div className="k-d-flex k-d-md-none k-justify-content-center k-mb-4">
         <div
           className="k-pos-relative"
           style={{
             width: "100%",
-            maxWidth: "400px",
-            height: "400px",
+            maxWidth: "300px",
+            height: "250px",
             backgroundImage: 'url("/photo-4.png")',
             backgroundSize: "contain",
             backgroundPosition: "center",
@@ -28,10 +28,10 @@ export default function HeroSection() {
       
       <div className="k-container k-px-4">
     
-        <div className="k-d-flex k-flex-row k-gap-5 k-mb-12">
+        <div className="k-d-flex k-flex-row k-gap-5 k-mb-6 k-mb-md-12">
          
           <div className="k-flex-basis-0 k-flex-grow">
-            <div className="k-d-flex k-flex-col k-gap-4">
+            <div className="k-d-flex k-flex-col k-gap-2 k-gap-md-4">
               <h1 className="k-h2 !k-m-0">
                 Custom dashboards, smart analytics, zero blind spots
               </h1>
@@ -47,7 +47,7 @@ export default function HeroSection() {
                 marginLeft: "-1rem",
                 transition: "all 0.3s ease",
               }}>
-                I'm Svitlana, and I create dashboards that help you quickly see what your customers are really doing
+                I'm Svitlana, and as a full-stack developer, I create dashboards that help you quickly see what your customers are really doing
               </p>
             </div>
           </div>
@@ -70,8 +70,8 @@ export default function HeroSection() {
         </div>
 
     
-        <div className="k-d-flex k-flex-col k-gap-12">
-          <div className="k-d-flex k-flex-col k-flex-sm-row k-align-items-start k-gap-5">
+        <div className="k-d-flex k-flex-col k-gap-6 k-gap-md-12">
+          <div className="k-d-flex k-flex-col k-flex-sm-row k-align-items-start k-gap-3 k-gap-md-5">
             <a
               href="https://www.upwork.com/freelancers/svitlanah11?mp_source=share"
               target="_blank"
@@ -192,7 +192,7 @@ export default function HeroSection() {
           )}
           
          
-          <div className="k-d-flex k-flex-col k-gap-5">
+          <div className="k-d-none k-d-md-flex k-flex-col k-gap-5">
             <div className="k-d-flex k-flex-col k-flex-sm-row k-gap-5">
               <div className="k-d-flex k-align-items-center k-gap-2.5">
                 <SvgIcon icon={checkIcon} themeColor="tertiary" />

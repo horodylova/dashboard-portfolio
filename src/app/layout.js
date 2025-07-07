@@ -1,7 +1,6 @@
 import "@progress/kendo-theme-default/dist/all.css";
 import "@progress/kendo-theme-utils/dist/all.css";
 import "./globals.css";
-import { Metadata } from "next";
 
 export const metadata = {
   title: "Svitlana Horodylova Portfolio",

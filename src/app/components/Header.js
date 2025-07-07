@@ -343,7 +343,7 @@ export default function Header() {
                   e.target.style.paddingLeft = '12px';
                 }}
               >
-                Contact
+                Brief
               </div>
             </div>
           </div>
