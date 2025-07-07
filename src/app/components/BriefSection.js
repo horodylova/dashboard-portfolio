@@ -19,7 +19,7 @@ export default function BriefSection() {
   }, []);
 
   return (
-    <section id="contact" className="k-bg-app-surface k-py-4 k-py-md-15 k-py-lg-24">
+    <section id="contact" className=" k-bg-surface k-py-4 k-py-md-15 k-py-lg-24">
       <div
         className="k-d-flex k-flex-col k-gap-3 k-gap-md-10 k-align-items-center k-py-4 k-py-md-16 k-px-3 k-px-md-19 k-px-lg-24 k-bg-primary k-color-white k-rounded-xl k-mx-auto k-box-sizing-border"
         style={{ maxWidth: '935px' }}  

@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="k-bg-surface k-py-8 k-py-md-10 k-py-lg-12">
+    <footer className="k-bg-app-surface k-py-8 k-py-md-10 k-py-lg-12">
       <div className="k-container">
         <div className="k-px-4">
   

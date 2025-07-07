@@ -102,7 +102,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="k-bg-surface k-py-8 k-py-md-15 k-py-lg-24">
+    <section id="testimonials" className="k-bg-app-surface k-py-8 k-py-md-15 k-py-lg-24">
       <div className="k-container k-gap-5 k-align-items-center k-px-4">
         <div className="k-d-flex k-flex-col k-align-items-center k-gap-4">
           <h2 className="k-h2 !k-m-0 k-color-primary k-text-center">Testimonials</h2>

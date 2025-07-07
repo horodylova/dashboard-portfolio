@@ -8,6 +8,7 @@ import FeaturesSection from './components/FeaturesSection';
 import ProjectsGrid from './components/ProjectsGrid';
 import Testimonials from './components/Testimonials';
 import BriefSection from './components/BriefSection';
+import SkillsSection from './components/SkillsSection';
 import Footer from './components/Footer';
 
 export default function SaasProduct() {
@@ -16,10 +17,11 @@ export default function SaasProduct() {
       <Header />
       <main>
         <HeroSection />
+         <SkillsSection />
         <PainPointsSolvedSection />
         <FeaturesSection />
         <ProjectsGrid />
-         <Testimonials />
+        <Testimonials />
         <BriefSection />
       </main>
       <Footer />

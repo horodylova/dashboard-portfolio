@@ -167,10 +167,7 @@ export default function Header() {
           </AppBarSection>
         </AppBar>
       </header>
-      
     
-      <div style={{ height: '80px' }}></div>
-  
      
       {mobileMenuOpen && (
         <div 
