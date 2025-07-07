@@ -87,6 +87,11 @@ export default function Testimonials() {
     setTouchEnd(e.targetTouches[0].clientX);
   };
 
+  const onTouchCancel = () => {
+    setTouchStart(null);
+    setTouchEnd(null);
+  };
+
   const onTouchEnd = () => {
     if (!touchStart || !touchEnd || !isMobile) return;
     
@@ -99,6 +104,9 @@ export default function Testimonials() {
     } else if (isRightSwipe) {
       goToPrevPage();
     }
+   
+    setTouchStart(null);
+    setTouchEnd(null);
   };
 
   return (
@@ -117,6 +125,7 @@ export default function Testimonials() {
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
+          onTouchCancel={onTouchCancel}
         >
     
           <div 
