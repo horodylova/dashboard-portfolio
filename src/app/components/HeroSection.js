@@ -18,7 +18,7 @@ export default function HeroSection() {
             width: "100%",
             maxWidth: "300px",
             height: "250px",
-            backgroundImage: 'url("/photo-4.png")',
+            backgroundImage: 'url("/portfolio-new.png")',
             backgroundSize: "contain",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -58,9 +58,9 @@ export default function HeroSection() {
               className="k-pos-relative"
               style={{
                 width: "100%",
-                maxWidth: "600px",
-                height: "400px", 
-                backgroundImage: 'url("/photo-4.png")',
+                maxWidth: "800px",
+                height: "500px", 
+                backgroundImage: 'url("/5.png")',
                 backgroundSize: "contain",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",

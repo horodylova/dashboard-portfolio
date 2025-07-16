@@ -6,11 +6,11 @@ export const metadata = {
   title: "Svitlana Horodylova",
   description: "Interactive dashboards and data visualization solutions for businesses",
   openGraph: {
-    title: "Svitlana Horodylova",
+    title: "Svitlana Horodylovaportfolio",
     description: "Interactive dashboards and data visualization solutions for businesses",
     images: [
       {
-        url: "/photo-1.png",
+        url: "/portfolio-new.png",
         width: 1200,
         height: 630,
         alt: "Svitlana Horodylova"
