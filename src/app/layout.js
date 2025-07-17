@@ -10,7 +10,7 @@ export const metadata = {
     description: "Interactive dashboards and data visualization solutions for businesses",
     images: [
       {
-        url: "/portfolio-new.png",
+        url: "/portfolio-new.png?v=1",
         width: 1200,
         height: 630,
         alt: "Svitlana Horodylova"
